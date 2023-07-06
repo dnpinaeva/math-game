@@ -1,3 +1,8 @@
 export const Root = () => {
-  return <div>Root</div>;
+  return <div>
+    <h4>Правила игры</h4>
+    <div>
+
+    </div>
+  </div>;
 };

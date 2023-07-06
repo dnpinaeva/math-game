@@ -5,13 +5,13 @@ const HeaderNavigation = () => {
   return (
     <div>
       <Navbar>
-        <Navbar.Brand>ADMIN Panel</Navbar.Brand>
+        <Navbar.Brand>Игра в спички</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/">
-            Главная
+            Правила
           </Nav.Link>
-          <Nav.Link as={Link} to="/users">
-            Пользователи
+          <Nav.Link as={Link} to="/game">
+            Игра
           </Nav.Link>
         </Nav>
       </Navbar>
