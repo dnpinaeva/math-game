@@ -1,7 +1,10 @@
+import FireView from "./FireView";
+
 const Garbage = (props) => {
     return (
-        <div>
+        <div className={"text-center"}>
             <h3>Сейчас в куче: {props.count}</h3>
+            <FireView count = {props.count}/>
         </div>
     );
 };

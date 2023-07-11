@@ -16,10 +16,10 @@ export const Game = () => {
             <Garbage count={gameStore.game.totalCount} />
             <Container>
                 <Row>
-                    <Col>
+                    <Col className={"text-center"}>
                         <Human/>
                     </Col>
-                    <Col>
+                    <Col className={"text-center"}>
                         <Player name = "Компьютер" prevStep = {gameStore.game.prevStepComputer} />
                     </Col>
                 </Row>

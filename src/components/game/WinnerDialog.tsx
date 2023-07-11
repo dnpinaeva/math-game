@@ -16,11 +16,11 @@ const WinnerDialog = () => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                Выиграл {gameStore.game.winner == 1 ? "Игрок" : "Компьютер"}
+                Победа за {gameStore.game.winner == 1 ? "Игроком" : "Компьютером"}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="primary" onClick={()=>{ gameStore.clearWinner() }}>
-                    Закрыть
+                <Button variant="primary" onClick={()=>{ gameStore.showNewGameDialog() }}>
+                    Начать новую игру
                 </Button>
             </Modal.Footer>
         </Modal>
