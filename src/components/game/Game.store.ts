@@ -19,6 +19,8 @@ interface IGameStore {
     //Победитель
     winner: number;
 
+    newGame: boolean;
+
 }
 
 class GameStore {
@@ -29,6 +31,7 @@ class GameStore {
         currentStepUser : 0,
         computerType : ComputerType.StrongStrategy,
         winner : null,
+        newGame: false
     }
 
     constructor() {
@@ -39,6 +42,10 @@ class GameStore {
         this.game.winner = null;
     }
 
+    public showNewGameDialog(){
+        this.game.newGame = true;
+    }
+
     public startGame(totalCount: number, computerType: ComputerType){
         this.game.totalCount = totalCount;
         this.game.prevStepUser = 0;
@@ -46,6 +53,7 @@ class GameStore {
         this.game.currentStepUser = 0;
         this.game.computerType = computerType;
         this.game.winner = null;
+        this.game.newGame = false;
 
     }
 

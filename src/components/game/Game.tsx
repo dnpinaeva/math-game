@@ -5,12 +5,14 @@ import Human from "./Human";
 import Player from "./Player";
 import {gameStore, ComputerType} from "./Game.store";
 import WinnerDialog from "./WinnerDialog";
+import { StartGameDialog } from "./StartGameDialog";
 
 export const Game = () => {
     return (
         <div>
             {gameStore.game.winner != null ? (<WinnerDialog/>) : (null)}
-            <Button variant="outline-primary">Новая игра</Button>
+            {gameStore.game.newGame ? (<StartGameDialog/>) : (null)}
+            <Button variant="outline-primary" onClick={()=>gameStore.showNewGameDialog()}>Новая игра</Button>
             <Garbage count={gameStore.game.totalCount} />
             <Container>
                 <Row>
